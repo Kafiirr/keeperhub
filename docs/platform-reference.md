@@ -168,6 +168,7 @@ address a wallet user signed in with - see
 | 0G Galileo (testnet) | `16602` | - | experimental |
 | Arc (Circle) | `5042` | `0x3600000000000000000000000000000000000000` | experimental |
 | Arc Testnet (Circle) | `5042002` | `0x3600000000000000000000000000000000000000` | experimental |
+| Somnia | `5031` | `0x28bec7e30e6faee657a03e19bf1128aad7632a00` | experimental |
 
 Arc's USDC is also its native gas token. The address above is the fixed
 ERC-20-interface precompile Circle documents for programmatic balance and
@@ -181,6 +182,10 @@ action. Transaction and address links work normally - Circle's mainnet
 explorer went live at explorer.arc.io, but its API is still gated, which is
 what ABI auto-fetch depends on. Event and block triggers work normally on
 both networks.
+
+Somnia's native gas currency is SOMI. The USDC address above is Bridged USDC
+(USDC.e, Stargate) at 6 decimals, verified on-chain. Somnia publishes a public
+WebSocket endpoint at `wss://api.infra.mainnet.somnia.network/ws`.
 
 The live source of truth for chains is `GET /api/chains`; agents can read the
 same list (including per-chain `status`) from the `list_action_schemas` MCP

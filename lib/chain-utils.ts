@@ -11,6 +11,7 @@ const CHAIN_NAMES: Record<string, string> = {
   "4217": "Tempo",
   "101": "Solana",
   "103": "Solana Devnet",
+  "5031": "Somnia",
 };
 
 const EXPLORER_URLS: Record<string, string> = {

@@ -335,6 +335,19 @@ const TOKEN_CONFIGS: TokenConfig[] = [
     isStablecoin: true,
     sortOrder: 1,
   },
+
+  // ==========================================================================
+  // Somnia Mainnet (chainId: 5031)
+  // ==========================================================================
+  // Bridged USDC (Stargate), 6 decimals. Verified with eth_call against
+  // https://api.infra.mainnet.somnia.network via scripts/verify-token.ts.
+  {
+    chainId: 5031,
+    tokenAddress: "0x28bec7e30e6faee657a03e19bf1128aad7632a00", // USDC.e (Bridged USDC, Stargate)
+    logoUrl: LOGOS.USDC,
+    isStablecoin: true,
+    sortOrder: 1,
+  },
 ];
 
 /**

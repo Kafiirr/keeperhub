@@ -111,6 +111,10 @@ export const PUBLIC_RPCS = {
   // Blockdaemon's endpoint completes the WSS upgrade handshake with no API
   // key required, unlike the Alchemy/QuickNode mirrors docs.arc.io lists.
   ARC_MAINNET_WSS: "wss://rpc.blockdaemon.mainnet.arc.io/websocket",
+  // Somnia Mainnet (Chain ID 5031)
+  SOMNIA_MAINNET: "https://api.infra.mainnet.somnia.network",
+  SOMNIA_MAINNET_FALLBACK: "https://somnia-rpc.publicnode.com",
+  SOMNIA_MAINNET_WSS: "wss://api.infra.mainnet.somnia.network/ws",
 } as const;
 
 /**
@@ -336,6 +340,15 @@ export const CHAIN_CONFIG: Record<number, ChainConfigEntry> = {
     publicDefault: PUBLIC_RPCS.ARC_MAINNET,
     publicFallback: PUBLIC_RPCS.ARC_MAINNET_FALLBACK,
     publicWssDefault: PUBLIC_RPCS.ARC_MAINNET_WSS,
+  },
+  // Somnia Mainnet
+  5031: {
+    jsonKey: "somnia-mainnet",
+    envKey: "CHAIN_SOMNIA_MAINNET_PRIMARY_RPC",
+    fallbackEnvKey: "CHAIN_SOMNIA_MAINNET_FALLBACK_RPC",
+    publicDefault: PUBLIC_RPCS.SOMNIA_MAINNET,
+    publicFallback: PUBLIC_RPCS.SOMNIA_MAINNET_FALLBACK,
+    publicWssDefault: PUBLIC_RPCS.SOMNIA_MAINNET_WSS,
   },
 };
 
